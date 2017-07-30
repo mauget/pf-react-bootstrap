@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import {FormControl, FormGroup, Label, ControlLabel} from 'react-bootstrap';
+import {FormControl, FormGroup, ControlLabel} from 'react-bootstrap';
 import {Page} from './components/Page';
 import {Section} from './components/Section'
 import {CheckboxPF} from './components/CheckboxPF';
@@ -13,19 +13,19 @@ class App extends Component {
             <Page id="page1" title='POC of "React Bootstrap" Lib (page title optional)'>
 
                 <Section title="Section One (title optional)">
-                    <FormGroup row>
-                        <Label for="firstName">First Name</Label>
+                    <FormGroup>
+                        <ControlLabel>First Name</ControlLabel>
                         <FormControl type="text" name="firstName" id="firstName" placeholder="First"/>
                     </FormGroup>
 
-                    <FormGroup row>
-                        <Label for="firstName">Last Name</Label>
-                        <FormControl type="text" name="lastName" id="lastName" placeholder="Last name"/>
+                    <FormGroup>
+                        <ControlLabel>Last Name</ControlLabel>
+                        <FormControl type="text" name="lastName" id="lastName" placeholder="Last"/>
                     </FormGroup>
                 </Section>
 
                 <Section title="Section Two (title optional)">
-                    <FormGroup row>
+                    <FormGroup>
                         <ControlLabel>Pick One Option</ControlLabel>
                         <FormControl componentClass="select" name="select" id="exampleSelect">
                             <option>Earth</option>
@@ -36,14 +36,13 @@ class App extends Component {
                         </FormControl>
                     </FormGroup>
 
-                    <CheckboxPF  label="Check me out"/>
+                    <CheckboxPF id="cb1" label="Check me out" defaultChecked="true"/>
 
-                    <Radiobutton name="radioGroup" checked="true" label="Option 1"/>
-                    <Radiobutton name="radioGroup" label="Option 2"/>
-                    <Radiobutton name="radioGroup" label="Option 3"/>
+                    <Radiobutton id="rb1" value="1" name="radioGroup" label="Option 1" defaultChecked="true"/>
+                    <Radiobutton id="rb2" value="2" name="radioGroup" label="Option 2"/>
+                    <Radiobutton id="rb3" value="3" name="radioGroup" label="Option 3"/>
 
-
-                    <ButtonPF>Send</ButtonPF>
+                    <ButtonPF bsStyle="primary">Send</ButtonPF>
 
                 </Section>
             </Page>

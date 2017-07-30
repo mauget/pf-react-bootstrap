@@ -14,7 +14,8 @@ export class Section extends Component {
     }
 
     render() {
-        return <Form id={this.id}>{this.title}{this.props.children}</Form>;
+        return <Form id={this.id}
+             style={{mardinBottom: "100px"}}>{this.title}{this.props.children}</Form>;
 
     }
 

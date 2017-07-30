@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css'
-import {FormGroup, Radio} from 'react-bootstrap';
+import {Radio} from 'react-bootstrap';
 
 // Note that "Form" is a Bootstrap user interaction layout wrapper, not a PerfectForms form.
 export class Radiobutton extends Component {
@@ -9,20 +9,22 @@ export class Radiobutton extends Component {
         super(props);
         this.label = props.label;
         this.id = props.id;
-        this.checked = props.checked;
-        this.inline = props.inline;
+        this.defaultChecked = props.defaultChecked;
+        this.value = props.value;
+        this.name = props.name;
 
-        // Declare any event handlers here
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange(ev) {
     }
 
     render() {
         const
-            checked = 'checked',
-            inline = 'inline';
+            defaultChecked = 'defaultChecked';
 
-        return <FormGroup row>
-            <Radio id={this.id} checked={this.checked ? checked : ''} inline={this.inline ? inline : ''} >{this.label}</Radio>
-        </FormGroup>;
+        return <Radio id={this.id} name={this.name} defaultChecked={this.defaultChecked ? defaultChecked : ''}
+                      onChange={this.handleChange}>{this.label}</Radio>;
 
     }
 

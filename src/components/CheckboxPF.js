@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css'
-import {FormGroup, Checkbox} from 'react-bootstrap';
+import {Checkbox} from 'react-bootstrap';
 
 // Note that "Form" is a Bootstrap user interaction layout wrapper, not a PerfectForms form.
 export class CheckboxPF extends Component {
@@ -9,17 +9,19 @@ export class CheckboxPF extends Component {
         super(props);
         this.label = props.label;
         this.id = props.id;
-        this.checked = props.checked
+        this.defaultChecked = props.defaultChecked
 
-        // Declare any event handlers here
+        this.handleChange = this.handleChange.bind(this);
+    }
+
+    handleChange() {
+        console.log('CheckboxPF ' + this.id + ' changed');
     }
 
     render() {
-        const checked = 'checked';
-        return <FormGroup row>
-            <Checkbox id={this.id} checked={this.checked ? checked : ''} inline>{this.label}</Checkbox>
-        </FormGroup>;
-
+        const defaultChecked = 'true';
+        return <Checkbox id={this.id} defaultChecked={this.defaultChecked ? defaultChecked : ''}
+                onChange={this.handleChange}>{this.label}</Checkbox>;
     }
 
 }
