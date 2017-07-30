@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../App.css'
 import {Radio} from 'react-bootstrap';
 
-// Note that "Form" is a Bootstrap user interaction layout wrapper, not a PerfectForms form.
 export class Radiobutton extends Component {
 
     constructor(props) {
@@ -17,6 +16,7 @@ export class Radiobutton extends Component {
     }
 
     handleChange(ev) {
+        console.log(`${this.id} selected`);
     }
 
     render() {

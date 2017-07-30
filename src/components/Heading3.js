@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import '../App.css'
 
-// Note that "Form" is a Bootstrap user interaction layout wrapper, not a PerfectForms form.
 export class Heading3 extends Component {
 
     constructor(props) {
