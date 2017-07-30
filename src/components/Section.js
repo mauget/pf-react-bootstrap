@@ -15,7 +15,7 @@ export class Section extends Component {
 
     render() {
         return <Form id={this.id}
-             style={{mardinBottom: "100px"}}>{this.title}{this.props.children}</Form>;
+             style={{marginTop: "1em", borderTop: "dashed 2px red"}}>{this.title}{this.props.children}</Form>;
 
     }
 

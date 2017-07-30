@@ -14,7 +14,7 @@ export class Page extends Component {
 
     render() {
         return <Grid id={this.id}
-                     style={{border: "solid green 1px", paddingBottom: "1em"}}>{this.title}{this.props.children}</Grid>;
+            style={{border: "solid green 1px", paddingTop: "1em", paddingBottom: "1em"}}>{this.title}{this.props.children}</Grid>;
 
     }
 
