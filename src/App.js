@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import './App.css';
-import {FormControl} from 'react-bootstrap';
 import {Page} from './components/Page';
 import {Section} from './components/Section'
 import {CheckboxPF} from './components/CheckboxPF';
@@ -8,6 +7,7 @@ import {Radiobutton} from './components/Radiobutton';
 import {ButtonPF} from './components/ButtonPF';
 import {Heading3} from './components/Heading3';
 import {TextInput} from './components/TextInput';
+import {Dropdown} from './components/Dropdown';
 
 class App extends Component {
     render() {
@@ -24,13 +24,13 @@ class App extends Component {
 
                 <Section title="Section Two (title optional)">
                     <Heading3>Pick One Option</Heading3>
-                    <FormControl componentClass="select" name="select" id="exampleSelect">
+                    <Dropdown name="select" id="exampleSelect">
                         <option>Earth</option>
                         <option>Wind</option>
                         <option>Fire</option>
                         <option>Water</option>
                         <option value="other">...</option>
-                    </FormControl>
+                    </Dropdown>
 
                     <CheckboxPF id="cb1" label="Check me out" defaultChecked="true"/>
 
