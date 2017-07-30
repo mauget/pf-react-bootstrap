@@ -8,6 +8,7 @@ import {ButtonPF} from './components/ButtonPF';
 import {Heading3} from './components/Heading3';
 import {TextInput} from './components/TextInput';
 import {Dropdown} from './components/Dropdown';
+import {Option} from './components/Option';
 
 class App extends Component {
     render() {
@@ -25,11 +26,11 @@ class App extends Component {
                 <Section title="Section Two (title optional)">
                     <Heading3>Pick One Option</Heading3>
                     <Dropdown name="select" id="exampleSelect">
-                        <option>Earth</option>
-                        <option>Wind</option>
-                        <option>Fire</option>
-                        <option>Water</option>
-                        <option value="other">...</option>
+                        <Option value="earth">Earth</Option>
+                        <Option value="wind">Wind</Option>
+                        <Option value="fire">Fire</Option>
+                        <Option value="water">Water</Option>
+                        <Option value="other">...</Option>
                     </Dropdown>
 
                     <CheckboxPF id="cb1" label="Check me out" defaultChecked="true"/>

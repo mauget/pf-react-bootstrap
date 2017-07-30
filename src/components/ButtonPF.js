@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import '../App.css'
 import {Button} from 'react-bootstrap';
 
-// Note that "Form" is a Bootstrap user interaction layout wrapper, not a PerfectForms form.
 export class ButtonPF extends Component {
 
     constructor(props) {
