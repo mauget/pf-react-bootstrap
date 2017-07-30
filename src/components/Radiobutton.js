@@ -12,11 +12,11 @@ export class Radiobutton extends Component {
         this.value = props.value;
         this.name = props.name;
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleChange(ev) {
-        console.log(`${this.id} selected`);
+    handleClick(ev) {
+        console.log(`Radiobutton group ${this.name} value is ${this.value}`);
     }
 
     render() {
@@ -24,8 +24,7 @@ export class Radiobutton extends Component {
             defaultChecked = 'defaultChecked';
 
         return <Radio id={this.id} name={this.name} defaultChecked={this.defaultChecked ? defaultChecked : ''}
-                      onChange={this.handleChange}>{this.label}</Radio>;
-
+                      onClick={this.handleClick}>{this.label}</Radio>;
     }
 
 }

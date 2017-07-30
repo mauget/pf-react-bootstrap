@@ -9,18 +9,23 @@ export class CheckboxPF extends Component {
         this.label = props.label;
         this.id = props.id;
         this.defaultChecked = props.defaultChecked;
+        this.state = {isToggleOn: true};
 
-        this.handleChange = this.handleChange.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    handleChange(ev) {
-        console.log(`Checkbox ${ev.target.value}`);
+    handleClick(ev) {
+
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+        console.log(`Checkbox ${this.state.isToggleOn}`);
     }
 
     render() {
         const defaultChecked = 'true';
         return <Checkbox id={this.id} defaultChecked={this.defaultChecked ? defaultChecked : ''}
-                 onChange={this.handleChange}>{this.label}</Checkbox>;
+                 onClick={this.handleClick}>{this.label}</Checkbox>;
     }
 
 }
