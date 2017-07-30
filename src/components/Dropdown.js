@@ -8,17 +8,21 @@ export class Dropdown extends Component {
         super(props);
         this.id = props.id;
         this.name = props.name;
-        this.placeholder = props.placeholder;
-        this.value = props.value;
+        this.selectedValue = props.selectedValue;
 
-        this.handleClick = this.handleClick.bind(this);
+        // this.setState({value: 'fire'});
+
+        this.handleChange = this.handleChange.bind(this);
     }
 
-    handleClick(ev) {
+    handleChange(ev) {
+        this.setState({value: ev.target.value});
     }
 
     render() {
-        return <FormControl componentClass="select" name={this.name} id={this.id}>{this.props.children}</FormControl>;
+        console.log(`Dropdown ${this.id} value`, this.state ? this.state.value : '');
+        return <FormControl componentClass="select" name={this.name} id={this.id}
+            onChange={this.handleChange} >{this.props.children}</FormControl>;
     }
 
 }

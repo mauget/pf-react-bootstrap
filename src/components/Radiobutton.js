@@ -20,8 +20,7 @@ export class Radiobutton extends Component {
     }
 
     render() {
-        const
-            defaultChecked = 'defaultChecked';
+        const defaultChecked = 'defaultChecked';
 
         return <Radio id={this.id} name={this.name} defaultChecked={this.defaultChecked ? defaultChecked : ''}
                       onClick={this.handleClick}>{this.label}</Radio>;

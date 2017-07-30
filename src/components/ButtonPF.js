@@ -13,7 +13,7 @@ export class ButtonPF extends Component {
     }
 
     handleClick() {
-        window.alert('Sending ... (not really)');
+        console.log(`Button ${this.id} clicked`);
     }
 
     render() {

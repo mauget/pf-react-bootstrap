@@ -25,7 +25,7 @@ class App extends Component {
 
                 <Section title="Section Two (title optional)">
                     <Heading3>Pick One Option</Heading3>
-                    <Dropdown name="select" id="exampleSelect">
+                    <Dropdown name="exampleSelect" id="exampleSelect" selectedValue="fire">
                         <Option value="earth">Earth</Option>
                         <Option value="wind">Wind</Option>
                         <Option value="fire">Fire</Option>
@@ -39,7 +39,7 @@ class App extends Component {
                     <Radiobutton id="rb2" value="2" name="radioGroup" label="Option 2"/>
                     <Radiobutton id="rb3" value="3" name="radioGroup" label="Option 3"/>
 
-                    <ButtonPF bsStyle="primary">Send</ButtonPF>
+                    <ButtonPF id="sendButton" bsStyle="primary">Send</ButtonPF>
 
                 </Section>
             </Page>
