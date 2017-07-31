@@ -11,13 +11,14 @@ import {Dropdown} from './components/Dropdown';
 import {Option} from './components/Option';
 import {Picture} from './components/Picture';
 import {LineChart} from './components/LineChart';
+import {PieChart} from './components/PieChart';
 
 class App extends Component {
 
     render() {
 
         // Demo boilerplate
-        const lineChartData = {
+        const chartData = {
             columns: [
                 ['Oats', 30, 200, 100, 400, 150, 250],
                 ['Wheat', 50, 20, 10, 40, 15, 25],
@@ -62,7 +63,10 @@ class App extends Component {
 
                 <Section title="Section 4">
                     <Heading3>Line Chart</Heading3>
-                    <LineChart id="lineChart1" src={lineChartData} />
+                    <LineChart id="lineChart1" src={chartData} />
+
+                    <Heading3>Pie Chart</Heading3>
+                    <PieChart id="pieChart1" src={chartData} />
                 </Section>
             </Page>
 

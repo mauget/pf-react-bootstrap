@@ -3,16 +3,15 @@ import '../App.css'
 import C3Chart from 'react-c3js';
 import 'c3/c3.css';
 
-export class LineChart extends Component {
+export class PieChart extends Component {
 
     constructor(props) {
         super(props);
         this.id = props.id;
-        // this.src = props.src;
 
         this.data = {};
         this.data.columns = props.src.columns;
-        this.data.type = 'line';
+        this.data.type  = 'pie';
 
         this.handleClick = this.handleClick.bind(this);
     }
@@ -22,9 +21,9 @@ export class LineChart extends Component {
     }
 
     render() {
-        return <C3Chart data={this.data} />;
+        return <C3Chart data={this.data}/>;
     }
 
 }
 
-export default LineChart;
+export default PieChart;
