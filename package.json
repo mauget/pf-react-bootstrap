@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^15.6.1",
     "bootstrap": "^3.3.7",
+    "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
+    "react-c3js": "^0.1.19",
     "react-dom": "^15.6.1",
     "react-scripts": "1.0.10",
     "react-transition-group": "^1.2.0"
