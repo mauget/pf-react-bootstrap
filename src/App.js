@@ -19,8 +19,9 @@ class App extends Component {
         // Demo boilerplate
         const lineChartData = {
             columns: [
-                ['data1', 30, 200, 100, 400, 150, 250],
-                ['data2', 50, 20, 10, 40, 15, 25]
+                ['Oats', 30, 200, 100, 400, 150, 250],
+                ['Wheat', 50, 20, 10, 40, 15, 25],
+                ['Alfalfa', 250, 150, 43, 66, 55, 111]
             ]
         };
 
