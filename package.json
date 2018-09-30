@@ -4,6 +4,11 @@
   "private": true,
   "dependencies": {
     "bootstrap": "^4.1.2",
+    "hoek": "^4.2.1",
+    "jquery": "^3.3.1",
+    "mime": "^1.4.1",
+    "popper.js": "^1.14.3",
+    "prop-types": "^15.5.0",
     "react": "^15.6.1",
     "react-bootstrap": "^0.31.1",
     "react-c3js": "^0.1.19",
